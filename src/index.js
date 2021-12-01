@@ -14,6 +14,7 @@ const props = {
   color4: "white",
   color5: "green",
   height: "200px",
+  margin: "10px 0px"
 };
 
 ReactDOM.render(
