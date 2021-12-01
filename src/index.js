@@ -3,26 +3,25 @@ import ReactDOM from 'react-dom';
 
 import App from './components/App.js';
 
-
 const props = {
-  title: "React JSX",
-  header: "We made it!",
-  lead: "Learn more",
-  color1: "blue",
-  color2: "red",
-  color3: "pink",
-  color4: "white",
-  color5: "green",
-  height: "200px",
-  margin: "10px 0px",
-  source: "./images/plus.png",
-  reactbtn:"you voted React!",
-  vuebtn: "you voted Vue!",
-  angularbtn: "you voted Angular!"
-};
+      title: "React JSX",
+      header: "We made it!",
+      lead: "Learn more",
+      color1: "blue",
+      color2: "red",
+      color3: "pink",
+      color4: "white",
+      color5: "green",
+      height: "200px",
+      margin: "10px 0px",
+      source: "./images/plus.png",
+      reactbtn:"you voted React!",
+      vuebtn: "you voted Vue!",
+      angularbtn:"you voted Angular!",
+}
 
 ReactDOM.render(
-  App(props),
+  <App {...props}/>,
   document.getElementById("root")
 );
 // equivalent to:

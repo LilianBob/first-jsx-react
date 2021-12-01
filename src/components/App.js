@@ -1,25 +1,33 @@
 import React from 'react';
 
-const App = (props) => {
+class App extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            starter: "We made it!",
+        }
+    }
+    render(){
         return(
             <div className="container">
-                <div className ="jumbotron" style= {{margin: props.margin, textAlign: "center"}}>
-                    <h1> {props.title} </h1>
-                    <h3 > {props.header} </h3>
-                    <p> <a href="./" className="btn btn-primary">{props.lead}</a> </p>
+                <div className ="jumbotron" style= {{margin: this.props.margin, textAlign: "center"}}>
+                    <h1> {this.props.title} </h1>
+                    <h3 onClick={()=> this.setState({starter: "Parse all our services"})}> {this.state.starter} </h3>
+                    <p><a href="./" className="btn btn-primary">{this.props.lead}</a> </p>
                 </div>
-                <div className="row" style= {{height: props.height, margin: props.margin}}>
-                    <div className="col" style={{background: props.color1}}>
-                        <h3 style={{color: props.color4}}> White on Blue </h3>
+                <div className="row" style= {{height: this.props.height, margin: this.props.margin}}>
+                    <div className="col" style={{background: this.props.color1}}>
+                        <h3 style={{color: this.props.color4}}> White on Blue </h3>
                     </div>
-                    <div className="col" style={{background: props.color2}}>
-                        <h3 style={{color: props.color1}}> Blue on Red</h3>
+                    <div className="col" style={{background: this.props.color2}}>
+                        <h3 style={{color: this.props.color1}}> Blue on Red</h3>
                     </div>
-                    <div className="col" style={{background: props.color3}}>
-                        <h3 style={{color: props.color5}}> Green on Pink </h3>
+                    <div className="col" style={{background: this.props.color3}}>
+                        <h3 style={{color: this.props.color5}}> Green on Pink </h3>
                     </div>
                 </div>
-                <div className="row" style= {{margin: props.margin, background: props.color1}}>
+                <div className="row" style= {{margin: this.props.margin, background: this.props.color1}}>
                     <div className="col">
                         <div className="card" style={{width:"18rem"}}>
                             <img className="card-img-top" src="./images/kitty.jpg" alt="kitty"></img>
@@ -58,21 +66,21 @@ const App = (props) => {
                                 <th scope="row">15</th>
                                 <td>React</td>
                                 <td>
-                                    <button onClick={()=> alert(props.reactbtn)}type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                    <button onClick={()=> alert(this.props.reactbtn)}type="submit"><img src={this.props.source} alt="plus" width="50px" height="50px"></img></button>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">9</th>
                                 <td>Vue</td>
                                 <td>
-                                    <button onClick={()=> alert(props.vuebtn)} type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                    <button onClick={()=> alert(this.props.vuebtn)} type="submit"><img src={this.props.source} alt="plus" width="50px" height="50px"></img></button>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td>Angular</td>
                                 <td>
-                                <button onClick={()=> alert(props.angularbtn)}type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                <button onClick={()=> alert(this.props.angularbtn)}type="submit"><img src={this.props.source} alt="plus" width="50px" height="50px"></img></button>
                                 </td>
                             </tr>
                         </tbody>
@@ -81,6 +89,9 @@ const App = (props) => {
             </div>
             
         ); 
+    }
+
 }
+
 
 export default App;
