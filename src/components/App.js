@@ -51,6 +51,33 @@ const App = (props) => {
                         </div>
                     </div>
                 </div>
+                <div className="table-responsive-sm">
+                    <table className="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th scope="row">15</th>
+                                <td>React</td>
+                                <td>
+                                    <button onClick={()=> alert(props.reactbtn)}type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">9</th>
+                                <td>Vue</td>
+                                <td>
+                                    <button onClick={()=> alert(props.vuebtn)} type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Angular</td>
+                                <td>
+                                <button onClick={()=> alert(props.angularbtn)}type="submit"><img src={props.source} alt="plus" width="50px" height="50px"></img></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             
         ); 

@@ -14,7 +14,11 @@ const props = {
   color4: "white",
   color5: "green",
   height: "200px",
-  margin: "10px 0px"
+  margin: "10px 0px",
+  source: "./images/plus.png",
+  reactbtn:"you voted React!",
+  vuebtn: "you voted Vue!",
+  angularbtn: "you voted Angular!"
 };
 
 ReactDOM.render(
