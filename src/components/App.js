@@ -6,7 +6,14 @@ class App extends React.Component{
 
         this.state = {
             starter: "We made it!",
+            nameUser: "",
+            count: 0,
         }
+    }
+    updateCount() {
+        this.setState(prevState => ({
+            count: prevState.count + 1
+        }));
     }
     render(){
         return(
@@ -85,6 +92,13 @@ class App extends React.Component{
                             </tr>
                         </tbody>
                     </table>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <h1> Hello </h1>
+                        <button onClick={()=>this.updateCount()} type="submit">click me</button>
+                        <p>You clicked me {this.state.count} times</p>
+                    </div>
                 </div>
             </div>
             
